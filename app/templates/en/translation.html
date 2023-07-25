@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
-    <title>Home</title>
+    <title>Translation</title>
     <meta charset="UTF-8">
     <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/navbars.css') }}">
@@ -16,15 +16,15 @@
 
         <!-- Navigation buttons -->
         <div class="top-buttons">
-            <a href="/nl/home" class="top-button-active">Home</a>
-            <a href="/nl/translation" class="top-button">Vertaling</a>
+            <a href="/" class="top-button">Home</a>
+            <a href="/en/translation" class="top-button-active">Translation</a>
         </div>
 
         <!-- Language switcher -->
         <select id="languageSwitcher">
+            <option value="en"><span>&#x1F1E8;&#x1F1F1;</span> English</option>
             <option value="nl"><span>&#x1F1F3;&#x1F1F1;</span> Nederlands</option>
             <option value="fr"><span>&#x1F1EB;&#x1F1F7;</span> Français</option>
-            <option value="en"><span>&#x1F1E8;&#x1F1F1;</span> English</option>
         </select>
 
         <!-- Dark mode switcher -->
@@ -35,21 +35,19 @@
     </div>
 
     <div class="content">
-        <h1>Welkome op Verbs</h1>
-        <p>Met deze site kun je onregelmatige werkwoorden in het Engels en Nederlands oefenen.
-            <br>Er zijn verschillende modi beschikbaar:
-            <br>- Vertaling: vertaal het werkwoord in de andere taal
-            <br>- Infinitief: zoek de infinitief van het werkwoord.
-            <br>- Verleden deelwoord: zoek het verleden deelwoord van het werkwoord.
-            <br>- Imperfecte tijd: zoek de imperfecte tijd van het werkwoord.
-        </p>
+        <h1>Translation</h1>
+        <p>Give the French translation of the following verb: {{ verb }}</p>
+        <form action="/traduction" method="post">
+            <input type="hidden" name="verb" value="{{ verb }}">
+            <input type="text" name="answer" placeholder="Réponse" required>
+            <input type="submit" value="Valider">
     </div>
     
 
     <div class="bottom">
         <p class="bottom-component copyright">© 2023 Pierre-Yves Haubruge</p>
-        <a class="bottom-component" href="/conditions-utilisation">Gebruiksvervangenis</a>
-        <a class="bottom-component" href="/politique-de-confidentialité">Privee dingen</a>
+        <a class="bottom-component" href="/conditions-utilisation">Terms of services</a>
+        <a class="bottom-component" href="/politique-de-confidentialité">Privacy policy</a>
     </div>
 
 </body>

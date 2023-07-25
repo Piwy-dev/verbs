@@ -16,8 +16,8 @@
 
         <!-- Navigation buttons -->
         <div class="top-buttons">
-            <a href="/nl/home" class="top-button-active">Home</a>
-            <a href="/nl/translation" class="top-button">Vertaling</a>
+            <a href="/" class="top-button-active">Home</a>
+            <a href="/nl/translation" class="top-button-active">Vertaling</a>
         </div>
 
         <!-- Language switcher -->
@@ -35,14 +35,12 @@
     </div>
 
     <div class="content">
-        <h1>Welkome op Verbs</h1>
-        <p>Met deze site kun je onregelmatige werkwoorden in het Engels en Nederlands oefenen.
-            <br>Er zijn verschillende modi beschikbaar:
-            <br>- Vertaling: vertaal het werkwoord in de andere taal
-            <br>- Infinitief: zoek de infinitief van het werkwoord.
-            <br>- Verleden deelwoord: zoek het verleden deelwoord van het werkwoord.
-            <br>- Imperfecte tijd: zoek de imperfecte tijd van het werkwoord.
-        </p>
+        <h1>Vertaling</h1>
+        <p>Geef het vertaling in frans van de volgende werkwoord {{ verb }}</p>
+        <form action="/traduction" method="post">
+            <input type="hidden" name="verb" value="{{ verb }}">
+            <input type="text" name="answer" placeholder="Réponse" required>
+            <input type="submit" value="Valider">
     </div>
     
 

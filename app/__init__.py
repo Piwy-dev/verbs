@@ -28,6 +28,10 @@ def create_app(test_config=None):
     @app.route("/<lang>/home")
     def home(lang):
         return render_template('/{}/home.html'.format(lang))
+    
+    @app.route("/<lang>/translation")
+    def translation(lang):
+        return render_template('/{}/translation.html'.format(lang))
    
     #db.init_app(app)
 
