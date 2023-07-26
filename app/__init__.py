@@ -29,8 +29,10 @@ def create_app(test_config=None):
     def home(lang):
         return render_template('/{}/home.html'.format(lang))
     
-    @app.route("/<lang>/translation")
+    @app.route("/<lang>/translation", methods=['GET', 'POST'])
     def translation(lang):
+        if request.method == 'POST':
+            return render_template('/{}/translation.html'.format(lang), text=request.form['text'])
         return render_template('/{}/translation.html'.format(lang))
    
     #db.init_app(app)
