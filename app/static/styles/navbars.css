@@ -22,6 +22,14 @@
     color: #464646;
 }
 
+.bottom-component.active {
+    color: #5ca4da;
+}
+
+.bottom-component.active.dark {
+    color: #72b6eb;
+}
+
 .bottom-component.dark {
     color: #fff;
 }

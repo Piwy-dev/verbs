@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Terms of Use</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/navbars.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/general.css') }}">
+    <script type="module" src="{{ url_for('static', filename='js/index.js') }}"></script>
+</head>
+
+<body>
+    <div class="top">
+        <!-- Title -->
+        <p class="top-title">Verbs</p>
+
+        <!-- Navigation buttons -->
+        <div class="top-buttons">
+            <a href="/en/home" class="top-button">Home</a>
+            <a href="/en/translation" class="top-button">Translation</a>
+        </div>
+
+        <!-- Language switcher -->
+        <select id="languageSwitcher">
+            <option value="en"><span>&#x1F1EC;&#x1F1E7;</span> English</option>
+            <option value="nl"><span>&#x1F1F3;&#x1F1F1;</span> Nederlands</option>
+            <option value="fr"><span>&#x1F1EB;&#x1F1F7;</span> Français</option>
+        </select>
+
+        <!-- Dark mode switcher -->
+        <label id="dark-mode-switcher" class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <div class="terms-privacy">
+        <h1>Terms of Use</h1>
+
+        <p>Last Updated: July 27, 2023</p>
+
+        <p>By using the <b>Verbs</b> application, you agree to the following terms of use.</p>
+
+        <ol>
+            <li><b>Purpose of the Application:</b> "Verbs" is an educational application that allows users to review
+                irregular verbs in English and Dutch. Its purpose is to provide an interactive and fun learning environment to
+                improve knowledge of irregular verbs in these languages.</li>
+
+            <li><b>Educational Content:</b> The content provided in the "Verbs" application is for educational purposes
+                only. Information on irregular verbs is provided for informational purposes and should not be considered
+                exhaustive. While we strive to keep the content up to date and accurate, we cannot guarantee its accuracy at
+                all times. If you encounter any issues, please contact us (see the last point).</li>
+
+            <li><b>User Responsibility:</b> The use of the "Verbs" application is entirely at the user's own risk. We shall
+                not be liable for any consequences arising from the use of the content or features of the application.</li>
+
+            <li><b>Privacy:</b> We respect your privacy and are committed to protecting your personal information in
+                accordance with our <a href="/en/privacy">Privacy Policy</a>. All information on how we collect, use, and
+                protect your data can be found there.</li>
+
+            <li><b>Responsible Use:</b> You agree to use the "Verbs" application responsibly and to respect the rights of
+                other users. Any abusive, fraudulent, or unlawful use is strictly prohibited.</li>
+
+            <li><b>Changes to Terms of Use:</b> We reserve the right to modify these terms of use at any time. Updates will
+                be published on this page, and it is your responsibility to check for changes regularly. By continuing to use
+                the application after modifications, you accept the new terms.</li>
+
+            <li><b>Contact:</b> If you have any questions or comments regarding the terms of use or anything else, please
+                contact us at the following email address: <a href="mailto:byp.studio.dev@gmail.com">byp.studio.dev@gmail.com</a>.
+            </li>
+        </ol>
+    </div>
+
+    <div class="bottom">
+        <p class="bottom-component copyright">© 2023 Pierre-Yves Haubruge</p>
+        <a class="bottom-component active" href="/en/terms">Terms of services</a>
+        <a class="bottom-component" href="/en/privacy">Privacy policy</a>
+    </div>
+</body>
+
+</html>

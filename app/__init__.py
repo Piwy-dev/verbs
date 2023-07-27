@@ -34,6 +34,14 @@ def create_app(test_config=None):
         if request.method == 'POST':
             return render_template('/{}/translation.html'.format(lang), text=request.form['text'])
         return render_template('/{}/translation.html'.format(lang))
+    
+    @app.route("/<lang>/terms")
+    def terms(lang):
+        return render_template('/{}/terms.html'.format(lang))
+    
+    @app.route("/<lang>/privacy")
+    def privacy(lang):
+        return render_template('/{}/privacy.html'.format(lang))
    
     #db.init_app(app)
 

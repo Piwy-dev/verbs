@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
-    <title>Home</title>
+    <title>Privacybeleid</title>
     <meta charset="UTF-8">
     <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/navbars.css') }}">
@@ -16,7 +17,7 @@
 
         <!-- Navigation buttons -->
         <div class="top-buttons">
-            <a href="/nl/home" class="top-button-active">Home</a>
+            <a href="/nl/home" class="top-button">Home</a>
             <a href="/nl/translation" class="top-button">Vertaling</a>
         </div>
 
@@ -34,21 +35,38 @@
         </label>
     </div>
 
-    <div class="content">
-        <h1>Welkome op Verbs</h1>
-        <p>Met deze site kun je onregelmatige werkwoorden in het Engels en Nederlands oefenen.
-            <br>Er zijn verschillende modi beschikbaar:
-            <br>- Vertaling: vertaal het werkwoord in de andere taal
-            <br>- Infinitief: zoek de infinitief van het werkwoord.
-            <br>- Verleden deelwoord: zoek het verleden deelwoord van het werkwoord.
-            <br>- Imperfecte tijd: zoek de imperfecte tijd van het werkwoord.
-        </p>
+    <div class="terms-privacy">
+        <h1>Privacybeleid</h1>
+
+        <p>Laatst bijgewerkt: 27 juli 2023</p>
+
+        <p>Dit privacybeleid legt uit welke gegevens worden verzameld door de site en hoe deze worden verwerkt.</p>
+
+        <h2>Persoonsgegevens</h2>
+
+        <p>De applicatie verzamelt geen persoonsgegevens.</p>
+
+        <h2>Cookies</h2>
+
+        <p>De applicatie verzamelt cookies om uw voorkeuren te bewaren: het gekozen thema (licht of donker) en de geselecteerde
+            taal. U kunt deze cookies op elk moment verwijderen door de procedure te volgen die uw browser biedt.</p>
+
+        <h2>Wijzigingen</h2>
+
+        <p>Wij behouden ons het recht voor om dit privacybeleid op elk moment bij te werken of te wijzigen. Updates worden op
+            deze pagina gepubliceerd.</p>
+
+        <h2>Contact</h2>
+
+        <p>Als u vragen of zorgen heeft over dit privacybeleid of over enig ander aspect van onze gegevensverwerking, neem dan
+            contact met ons op via <a href="mailto:byp.studio.dev@gmail.com">byp.studio.dev@gmail.com</a>.</p>
+
     </div>
 
     <div class="bottom">
         <p class="bottom-component copyright">© 2023 Pierre-Yves Haubruge</p>
         <a class="bottom-component" href="/nl/terms">gebruiksvoorwaarden</a>
-        <a class="bottom-component" href="/nl/privacy">privacybeleid</a>
+        <a class="bottom-component active" href="/nl/privacy">privacybeleid</a>
     </div>
 </body>
 

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Conditions d'utilisation</title>
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/navbars.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/general.css') }}">
+    <script type="module" src="{{ url_for('static', filename='js/index.js') }}"></script>
+</head>
+
+<body>
+    <div class="top">
+        <!-- Title -->
+        <p class="top-title">Verbs</p>
+
+        <!-- Navigation buttons -->
+        <div class="top-buttons">
+            <a href="/fr/home" class="top-button">Acceuil</a>
+            <a href="/fr/translation" class="top-button">Traduction</a>
+        </div>
+
+        <!-- Language switcher -->
+        <select id="languageSwitcher">
+            <option value="fr"><span>&#x1F1EB;&#x1F1F7;</span> Français</option>
+            <option value="en"><span>&#x1F1EC;&#x1F1E7;</span> English</option>
+            <option value="nl"><span>&#x1F1F3;&#x1F1F1;</span> Nederlands</option>
+        </select>
+
+        <!-- Dark mode switcher -->
+        <label id="dark-mode-switcher" class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <div class="terms-privacy">
+        <h1>Conditions d'utilisation</h1>
+
+        <p>Dernière mise à jour : 27 juillet 2023</p>
+
+        <p>En utilisant l'application <b>Verbs</b>, vous acceptez les conditions d'utilisation énoncées ci-dessous.</p>
+
+        <ol>
+            <li><b>Objectif de l'application :</b> "Verbs" est une application éducative qui permet aux utilisateurs
+                de réviser les verbes irréguliers en anglais et en néerlandais. Son but est de fournir un environnement
+                d'apprentissage interactif et ludique pour améliorer la connaissance des verbes irréguliers dans ces
+                langues.</li>
+
+            <li><b>Contenu pédagogique :</b> Le contenu fourni dans l'application "Verbs" est à des fins éducatives
+                uniquement. Les informations sur les verbes irréguliers sont fournies de manière informative et ne doivent pas
+                être considérées comme exhaustives. Nous nous efforçons de maintenir le contenu à jour et précis, mais nous ne
+                pouvons garantir son exactitude à tout moment. Si vous rencontrez un problème, veillez nous contacter (voir dernier point).</li>
+
+            <li><b>Responsabilité de l'utilisateur :</b> L'utilisation de l'application "Verbs" est entièrement de la
+                responsabilité de l'utilisateur. Nous ne pouvons être tenus responsables des conséquences liées à l'utilisation
+                du contenu ou des fonctionnalités de l'application.</li>
+
+            <li><b>Confidentialité :</b> Nous respectons votre vie privée et nous engageons à protéger vos
+                informations personnelles conformément à notre <a href="/fr/privacy">politique de confidentialité</a>. Toutes les informations 
+                sur la manière dont nous collectons, utilisons et protégeons vos données s'y trouvent.</li>
+
+            <li><b>Utilisation responsable :</b> Vous vous engagez à utiliser l'application "Verbs" de manière
+                responsable et à respecter les droits des autres utilisateurs. Toute utilisation abusive, frauduleuse ou contraire
+                aux lois en vigueur est strictement interdite.</li>
+
+            <li><b>Modification des conditions d'utilisation :</b> Nous nous réservons le droit de modifier ces
+                conditions d'utilisation à tout moment. Les mises à jour seront publiées sur cette page, et il vous incombe de
+                vérifier régulièrement les changements. En continuant à utiliser l'application après les modifications, vous
+                acceptez les nouvelles conditions.</li>
+            
+            <li><b>Contact :</b> Si vous avez des questions ou des commentaires concernant les conditions d'utilisation 
+                ou autre chose, veuillez nous contacter à l'adresse suivante : <a href="mailto:byp.studio.dev@gmail.com">byp.studio.dev@gmail.com</a>.
+        </ol>
+    </div>
+
+    <div class="bottom">
+        <p class="bottom-component copyright">© 2023 Pierre-Yves Haubruge</p>
+        <a class="bottom-component active" href="/fr/terms">Conditions d'utilisation</a>
+        <a class="bottom-component" href="/fr/privacy">Politique de confidentialité</a>
+    </div>
+</body>
+
+</html>

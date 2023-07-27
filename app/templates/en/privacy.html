@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>Home</title>
+    <title>Privacy Policy</title>
     <meta charset="UTF-8">
     <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/navbars.css') }}">
@@ -16,7 +17,7 @@
 
         <!-- Navigation buttons -->
         <div class="top-buttons">
-            <a href="/en/home" class="top-button-active">Home</a>
+            <a href="/en/home" class="top-button">Home</a>
             <a href="/en/translation" class="top-button">Translation</a>
         </div>
 
@@ -34,24 +35,37 @@
         </label>
     </div>
 
-    <div class="content">
-        <h1>Welcome in Verbs</h1>
-        <p>This site helps you revise irregular verbs in English and Dutch.
-            <br>Different modes are available :
-            <br>- Translation: translate the verb into the other language.
-            <br>- Infinitive: find the infinitive of the verb.
-            <br>- Past participle: find the past participle of the verb.
-            <br>- Imperfect tense: find the imperfect tense of the verb.
-        </p>
+    <div class="terms-privacy">
+        <h1>Privacy Policy</h1>
+
+        <p>Last Updated: July 27, 2023</p>
+
+        <p>This Privacy Policy explains what data is collected by the site and how it is processed.</p>
+
+        <h2>Personal Data</h2>
+
+        <p>The application does not collect any personal data.</p>
+
+        <h2>Cookies</h2>
+
+        <p>The application collects cookies to save your preferences: the chosen theme (light or dark) and the selected
+            language. You can delete these cookies at any time by following the procedure defined by your browser.</p>
+
+        <h2>Changes</h2>
+
+        <p>We reserve the right to update or modify this Privacy Policy at any time. Updates will be posted on this page.</p>
+
+        <h2>Contact Us</h2>
+
+        <p>If you have any questions or concerns regarding this Privacy Policy or any aspect of our data practices, please
+            contact us at <a href="mailto:byp.studio.dev@gmail.com">byp.studio.dev@gmail.com</a>.</p>
     </div>
-    
 
     <div class="bottom">
         <p class="bottom-component copyright">© 2023 Pierre-Yves Haubruge</p>
         <a class="bottom-component" href="/en/terms">Terms of services</a>
-        <a class="bottom-component" href="/en/privacy">Privacy policy</a>
+        <a class="bottom-component active" href="/en/privacy">Privacy policy</a>
     </div>
-
 </body>
 
 </html>

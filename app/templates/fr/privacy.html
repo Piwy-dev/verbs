@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Politique de Confidentialité</title>
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/navbars.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/general.css') }}">
+    <script type="module" src="{{ url_for('static', filename='js/index.js') }}"></script>
+</head>
+
+<body>
+    <div class="top">
+        <!-- Title -->
+        <p class="top-title">Verbs</p>
+
+        <!-- Navigation buttons -->
+        <div class="top-buttons">
+            <a href="/fr/home" class="top-button">Acceuil</a>
+            <a href="/fr/translation" class="top-button">Traduction</a>
+        </div>
+
+        <!-- Language switcher -->
+        <select id="languageSwitcher">
+            <option value="fr"><span>&#x1F1EB;&#x1F1F7;</span> Français</option>
+            <option value="en"><span>&#x1F1EC;&#x1F1E7;</span> English</option>
+            <option value="nl"><span>&#x1F1F3;&#x1F1F1;</span> Nederlands</option>
+        </select>
+
+        <!-- Dark mode switcher -->
+        <label id="dark-mode-switcher" class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <div class="terms-privacy">
+        <h1>Politique de Confidentialité</h1>
+
+        <p>Dernière mise à jour : 27 juillet 2023</p>
+
+        <p>Cette politique de confidentialté explique quelles données sont collectées par le site et de quelles 
+            manières celles-ci sont traitées.</p>
+
+        <h2>Données personnelles</h2>
+
+        <p>L'application ne collecte aucune données personnelles.</p>
+
+        <h2>Cookies</h2>
+
+        <p>L'application collecte des cookies pour garder vos préférences : le thème choisi (clair ou sombre) et la 
+            langue choisie. Vous pouvez supprimez ces cookies à tout moment en suivant la procédure définie par votre 
+            navigateur.</p>
+
+        <h2>Modifications</h2>
+
+        <p>Nous nous réservons le droit de mettre à jour ou de modifier cette Politique de Confidentialité à tout moment. Les
+            mises à jour seront publiées sur cette page.</p>
+
+        <h2>Nous Contacter</h2>
+
+        <p>Si vous avez des questions ou des préoccupations concernant cette Politique de Confidentialité ou tout aspect de
+            nos pratiques en matière de données, veuillez nous contacter à l'adresse suivante :
+            <a href="mailto:byp.studio.dev@gmail.com">byp.studio.dev@gmail.com</a>.</p>
+    </div>
+
+    <div class="bottom">
+        <p class="bottom-component copyright">© 2023 Pierre-Yves Haubruge</p>
+        <a class="bottom-component" href="/fr/terms">Conditions d'utilisation</a>
+        <a class="bottom-component active" href="/fr/privacy">Politique de confidentialité</a>
+    </div>
+</body>
+
+</html>

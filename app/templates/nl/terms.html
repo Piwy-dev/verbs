@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <title>Gebruiksvoorwaarden</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/navbars.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/general.css') }}">
+    <script type="module" src="{{ url_for('static', filename='js/index.js') }}"></script>
+</head>
+
+<body>
+    <div class="top">
+        <!-- Title -->
+        <p class="top-title">Verbs</p>
+
+        <!-- Navigation buttons -->
+        <div class="top-buttons">
+            <a href="/nl/home" class="top-button">Home</a>
+            <a href="/nl/translation" class="top-button">Vertaling</a>
+        </div>
+
+        <!-- Language switcher -->
+        <select id="languageSwitcher">
+            <option value="nl"><span>&#x1F1F3;&#x1F1F1;</span> Nederlands</option>
+            <option value="fr"><span>&#x1F1EB;&#x1F1F7;</span> Français</option>
+            <option value="en"><span>&#x1F1EC;&#x1F1E7;</span> English</option>
+        </select>
+
+        <!-- Dark mode switcher -->
+        <label id="dark-mode-switcher" class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <div class="terms-privacy">
+        <h1>Gebruiksvoorwaarden</h1>
+
+        <p>Laatst bijgewerkt: 27 juli 2023</p>
+
+        <p>Door gebruik te maken van de <b>Verbs</b> applicatie, gaat u akkoord met de volgende gebruiksvoorwaarden.</p>
+
+        <ol>
+            <li><b>Doel van de Applicatie:</b> "Verbs" is een educatieve applicatie waarmee gebruikers onregelmatige
+                werkwoorden in het Engels en Nederlands kunnen herzien. Het doel is om een interactieve en leuke leeromgeving
+                te bieden om kennis van onregelmatige werkwoorden in deze talen te verbeteren.</li>
+
+            <li><b>Educatieve Inhoud:</b> De inhoud die wordt verstrekt in de "Verbs" applicatie is uitsluitend bedoeld voor
+                educatieve doeleinden. Informatie over onregelmatige werkwoorden wordt verstrekt ter informatie en mag niet als
+                uitputtend worden beschouwd. Hoewel we ernaar streven de inhoud up-to-date en nauwkeurig te houden, kunnen we
+                de nauwkeurigheid niet te allen tijde garanderen. Als u problemen ondervindt, neem dan contact met ons op (zie
+                het laatste punt).</li>
+
+            <li><b>Verantwoordelijkheid van de Gebruiker:</b> Het gebruik van de "Verbs" applicatie is volledig voor eigen
+                risico van de gebruiker. Wij zijn niet aansprakelijk voor enige gevolgen die voortvloeien uit het gebruik van de
+                inhoud of functies van de applicatie.</li>
+
+            <li><b>Privacy:</b> We respecteren uw privacy en zijn toegewijd aan het beschermen van uw persoonlijke
+                informatie in overeenstemming met ons <a href="/nl/privacy">privacybeleid</a>. Alle informatie over hoe we uw
+                gegevens verzamelen, gebruiken en beschermen, kunt u daar vinden.</li>
+
+            <li><b>Verantwoord Gebruik:</b> U stemt ermee in om de "Verbs" applicatie verantwoordelijk te gebruiken en de
+                rechten van andere gebruikers te respecteren. Elk misbruik, frauduleus gebruik of onwettig gebruik is ten strengste
+                verboden.</li>
+
+            <li><b>Wijzigingen in de Gebruiksvoorwaarden:</b> We behouden ons het recht voor om deze gebruiksvoorwaarden op
+                elk moment te wijzigen. Updates worden op deze pagina gepubliceerd, en het is uw verantwoordelijkheid om
+                regelmatig te controleren op wijzigingen. Door de applicatie te blijven gebruiken na wijzigingen, accepteert u de
+                nieuwe voorwaarden.</li>
+
+            <li><b>Contact:</b> Als u vragen of opmerkingen heeft over de gebruiksvoorwaarden of iets anders, neem dan
+                contact met ons op via het volgende e-mailadres: <a href="mailto:byp.studio.dev@gmail.com">byp.studio.dev@gmail.com</a>.
+            </li>
+        </ol>
+    </div>
+
+    <div class="bottom">
+        <p class="bottom-component copyright">© 2023 Pierre-Yves Haubruge</p>
+        <a class="bottom-component active" href="/nl/terms">gebruiksvoorwaarden</a>
+        <a class="bottom-component" href="/nl/privacy">privacybeleid</a>
+    </div>
+</body>
+
+</html>
