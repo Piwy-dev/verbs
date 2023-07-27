@@ -40,15 +40,15 @@
         <form action="/fr/translation" method="post">
             <div class="lang-select">
                 <p>Langue de départ :</p>
-                <select name="language">
+                <select name="language" id="element1">
                     <option value="en">English</option>
                     <option value="nl">Dutch</option>
                 </select>
             </div>
-            <img src="{{ url_for('static', filename='images/swap.png') }}" alt="swap" class="lang-select swap">
+            <img src="{{ url_for('static', filename='images/swap.png') }}" alt="swap" class="lang-select swap" id="swap-button">
             <div class="lang-select">
                 <p>Langue d'arrivée :</p>
-                <p>French</p>
+                <p id="element2">French</p>
             </div>
             <input type="submit" value="Begin" class="begin-transl">
         </form>
