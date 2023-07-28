@@ -1,4 +1,4 @@
-.begin-transl {
+.begin {
     position: relative;
     display: block;
     margin: 50px auto;
@@ -12,7 +12,7 @@
     background-color: rgb(173, 202, 228);
 }
 
-.begin-transl:hover {
+.begin:hover {
     background-color: rgb(200, 219, 236);
 }
 

@@ -1,6 +1,7 @@
 import os
 from flask import *
 #from app import db
+from app import verbs
 
 
 def create_app(test_config=None):
@@ -29,11 +30,21 @@ def create_app(test_config=None):
     def home(lang):
         return render_template('/{}/home.html'.format(lang))
     
-    @app.route("/<lang>/translation", methods=['GET', 'POST'])
+    @app.route("/<lang>/translation")
     def translation(lang):
-        if request.method == 'POST':
-            return render_template('/{}/translation.html'.format(lang), text=request.form['text'])
         return render_template('/{}/translation.html'.format(lang))
+    
+    @app.route("/<lang>/exercise", methods=['GET', 'POST'])
+    def exercise(lang):
+        if request.method == 'POST':
+            startlang = request.headers.get('startlang')
+            endlang = request.headers.get('endlang')
+            tense = int(request.headers.get('tense'))
+            verbs_list = verbs.get_exercise(startlang, endlang, tense)
+            # Redirects to the exercises page with the verbs list loaded.
+            return render_template('/{}/exercise.html'.format(lang), verbs_list=verbs_list)
+        else:
+            return render_template('/{}/exercise.html'.format(lang), verbs_list=[])
     
     @app.route("/<lang>/terms")
     def terms(lang):

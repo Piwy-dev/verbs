@@ -20,11 +20,27 @@ function swap(element1, element2) {
  * @description Checks if the swap button is clicked and calls the swap function
  */
 export function check_swap() {
+    // Get the page language
+    const lang = document.documentElement.lang;
+
+    // Verify if the user is on the translation page
+    if (window.location.pathname !== `/${lang}/translation`) { return; }
+
     const swapButton = document.getElementById('swap-button');
     const element1 = document.getElementById('element1');
     const element2 = document.getElementById('element2');
 
+    // Keep track of the swaps
+    const swapKeeper = document.getElementById('swap-keeper');
+    let swaped = false;
+
     swapButton.addEventListener('click', () => {
         swap(element1, element2);
+        swaped = !swaped;
+        if (swaped) {
+            swapKeeper.classList.add('swaped');
+        } else {
+            swapKeeper.classList.remove('swaped');
+        }
     });
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title>Traduction</title>
+    <title>Exercice</title>
     <meta charset="UTF-8">
     <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/navbars.css') }}">
@@ -35,21 +35,7 @@
         </label>
     </div>
 
-    <div class="content">
-        <h1>Traduction</h1>
-        <div class="lang-select">
-            <p class="" id="swap-keeper">Langue de départ :</p>
-            <select name="language" id="element1">
-                <option value="en">Anglais</option>
-                <option value="nl">Néerlandais</option>
-            </select>
-        </div>
-        <img src="{{ url_for('static', filename='images/swap.png') }}" alt="swap" class="lang-select swap" id="swap-button">
-        <div class="lang-select">
-            <p>Langue d'arrivée :</p>
-            <p id="element2">Français</p>
-        </div>
-        <input type="submit" value="Commencer" class="begin" id="begin">
+    <div class="content">   
     </div>
     
 

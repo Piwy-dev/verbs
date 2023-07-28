@@ -1,4 +1,5 @@
 verbs_en = [
+    # [infinitive en (0), past simple (1), past participle (2), infinive fr (3), translation fr (4), translation en (5)]
     ["abide", "abode", "abode", "demeurer", "demeurer", "abide"],
     ["arise", "arose", "arisen", "s'élever, survenir", "s'élever, survenir", "arise"],
     ["awake", "awoke", "awoken", "(se) réveiller", "se réveiller, réveiller", "awake, wake"],
@@ -162,6 +163,7 @@ verbs_en = [
 ]
 
 verbs_nl = [
+    # [infinitive nl (0), past simple (1), past participle (2), infinitive fr (3), translation fr (4), translation nl (5)]
     ["aankommen", "kwamen aan", "aangekomen", "arriver", "arriver", "aankommen"],
     ["aanwerven", "wierven aan", "aangeworven", "recruter, engager", "recruter, engager", "aanwerven"],
     ["afspreken", "spraken af", "afgesproken", "convenir de", "convenir de, convenir", "afspreken"],
