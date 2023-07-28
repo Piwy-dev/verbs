@@ -41,10 +41,9 @@ def create_app(test_config=None):
             endlang = request.headers.get('endlang')
             tense = int(request.headers.get('tense'))
             verbs_list = verbs.get_exercise(startlang, endlang, tense)
-            # Redirects to the exercises page with the verbs list loaded.
-            return render_template('/{}/exercise.html'.format(lang), verbs_list=verbs_list)
+            return jsonify(verbs_list)
         else:
-            return render_template('/{}/exercise.html'.format(lang), verbs_list=[])
+            return render_template('/{}/exercise.html'.format(lang))
     
     @app.route("/<lang>/terms")
     def terms(lang):

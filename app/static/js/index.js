@@ -1,11 +1,9 @@
 import { setDarkmode } from './darkmode.js';
 import { setLanguage } from './language.js';
 import { check_swap } from './swap.js';
-import { beginExercice } from './exercice.js';
+import { beginExercise, showExercise } from './exercise.js';
 
 window.onload = function() {
-    const lang = document.documentElement.lang;
-
     // Set the dark mode based on the user's preference
     setDarkmode();
 
@@ -16,5 +14,6 @@ window.onload = function() {
     check_swap();
 
     // Begin an exercice, if the user clicks on the begin button
-    beginExercice();
+    beginExercise();
+    showExercise();
 };
