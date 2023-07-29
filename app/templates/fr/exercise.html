@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title>Exercice</title>
+    <title>Exercise</title>
     <meta charset="UTF-8">
     <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/navbars.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/general.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/translation.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/exercise.css') }}">
     <script type="module" src="{{ url_for('static', filename='js/index.js') }}"></script>
 </head>
 
@@ -18,7 +18,7 @@
         <!-- Navigation buttons -->
         <div class="top-buttons">
             <a href="/fr/home" class="top-button">Acceuil</a>
-            <a href="/fr/translation" class="top-button-active">Traduction</a>
+            <a href="/fr/translation" class="top-button">Traduction</a>
         </div>
 
         <!-- Language switcher -->
@@ -35,12 +35,13 @@
         </label>
     </div>
 
-    <div class="content">
-        <p>Donne la traduction du verbe suivant: </p>
-        <p id="verb"></p>
+    <div class="exercise">
+        <h1>Exercise</h1>
+        <p class="verb-sentence">Donne la traduction du verbe suivant : </p>
+        <p class="verb-sentence" id="verb"></p>
         <form id="submit-answer">
-            <input type="text" id="answer" name="answer" autocomplete="off">
-            <input type="submit" value="Valider">
+            <input type="text" id="answer" name="answer" autocomplete="off" placeholder="réponse">
+            <input type="submit" id="submit-button" value="Valider">
         </form>
         <p id="result"></p>
         <p id="qst-count">Question 1/20.</p>

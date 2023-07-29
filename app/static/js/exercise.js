@@ -70,24 +70,45 @@ export function showExercise() {
  * @description Verifies if the answer is correct.
  */
 function verifyAnswer() {
+    const lang = document.documentElement.lang;
+    let translations = {
+        "good_answer": {
+            "fr": "Bonne réponse !",
+            "en": "Good answer !",
+            "nl": "Goed antwoord !"
+        },
+        "bad_answer": {
+            "fr": "Mauvaise réponse ! La réponse était : ",
+            "en": "Bad answer ! The answer was : ",
+            "nl": "Fout antwoord ! Het antwoord was : "
+        },
+        "question": {
+            "fr": "Question : ",
+            "en": "Question : ",
+            "nl": "Vraag : "
+        },
+    }
+
     // Get the verbs list
     const verbs_list = JSON.parse(localStorage.getItem('verbs_list'));
 
     const answer = document.getElementById('answer').value;
-    const correct_answer = verbs_list[question_number][1];
+    const correct_answers = verbs_list[question_number][1].split(", ");
 
     const result = document.getElementById('result');
     const qstCount = document.getElementById('qst-count');
     const score = document.getElementById('score');
 
-    if (answer === correct_answer) {
+    if (correct_answers.includes(answer)) {
         good_answers++;
-        result.innerHTML = "Bonne réponse !";
-        qstCount.innerHTML = `Question : ${question_number + 1}/20.`;
+        result.innerHTML = translations["good_answer"][lang];
+        result.style.color = "green";
+        qstCount.innerHTML = `${translations["question"][lang]} ${question_number + 1}/20.`;
         score.innerHTML = `Score : ${good_answers}`;
     } else {
-        result.innerHTML = `Mauvaise réponse ! La réponse était : ${correct_answer}`;
-        qstCount.innerHTML = `Question : ${question_number}/20.`;
+        result.innerHTML = `${translations["bad_answer"][lang]} ${verbs_list[question_number][1]}`;
+        result.style.color = "red";
+        qstCount.innerHTML = `${translations["question"][lang]} ${question_number}/20.`;
     }
 
     question_number++;
@@ -99,16 +120,8 @@ function verifyAnswer() {
         document.getElementById('answer').value = "";
         document.getElementById('answer').focus();
 
-        // Clear the result after 2 seconds
-        setTimeout(() => {
-            result.innerHTML = "";
-        }, 4000);
-
-
         // Show the next verb
         const verb = document.getElementById('verb');
         verb.innerHTML = verbs_list[question_number][0];
-
-        console.log(verbs_list[question_number][0]);
     }
 }
