@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Results</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/navbars.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/exercise.css') }}">
+    <script type="module" src="{{ url_for('static', filename='js/index.js') }}"></script>
+</head>
+
+<body>
+    <div class="top">
+        <!-- Title -->
+        <p class="top-title">Verbs</p>
+
+        <!-- Navigation buttons -->
+        <div class="top-buttons">
+            <a href="/en/home" class="top-button">Home</a>
+            <a href="/en/translation" class="top-button">Translation</a>
+        </div>
+
+        <!-- Language switcher -->
+        <select id="languageSwitcher">
+            <option value="en"><span>&#x1F1EC;&#x1F1E7;</span> English</option>
+            <option value="nl"><span>&#x1F1F3;&#x1F1F1;</span> Nederlands</option>
+            <option value="fr"><span>&#x1F1EB;&#x1F1F7;</span> Français</option>
+        </select>
+
+        <!-- Dark mode switcher -->
+        <label id="dark-mode-switcher" class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <div class="exercise">
+        <h1>Results</h1>
+        <p id="score-result"></p>
+        <p>Here are the verbs you revised during this exercise session :</p>
+        <ol id="results-list"></ol>
+    </div>
+
+    <div class="bottom">
+        <p class="bottom-component copyright">© 2023 Pierre-Yves Haubruge</p>
+        <a class="bottom-component" href="/en/terms">Terms of services</a>
+        <a class="bottom-component" href="/en/privacy">Privacy policy</a>
+    </div>
+
+</body>
+
+</html>

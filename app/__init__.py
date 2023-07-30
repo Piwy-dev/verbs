@@ -44,6 +44,10 @@ def create_app(test_config=None):
             return jsonify(verbs_list)
         else:
             return render_template('/{}/exercise.html'.format(lang))
+        
+    @app.route("/<lang>/results")
+    def results(lang):
+        return render_template('/{}/results.html'.format(lang))
     
     @app.route("/<lang>/terms")
     def terms(lang):
