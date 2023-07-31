@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Translation</title>
+    <title>Imperfect</title>
     <meta charset="UTF-8">
     <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/navbars.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/general.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/translation.css') }}">
     <script type="module" src="{{ url_for('static', filename='js/index.js') }}"></script>
 </head>
 
@@ -18,8 +17,8 @@
         <!-- Navigation buttons -->
         <div class="top-buttons">
             <a href="/en/home" class="top-button">Home</a>
-            <a href="/en/translation" class="top-button-active">Translation</a>
-            <a href="/en/imperfect" class="top-button">Imperfect</a>
+            <a href="/en/translation" class="top-button">Translation</a>
+            <a href="/en/imperfect" class="top-button-active">Imperfect</a>
             <a href="/en/participle" class="top-button">Past participle</a>
         </div>
 
@@ -38,20 +37,8 @@
     </div>
 
     <div class="content">
-        <h1>Translation</h1>
-        <div class="lang-select">
-            <p class="" id="swap-keeper">Langue de départ :</p>
-            <select name="language" id="element1">
-                <option value="en">English</option>
-                <option value="nl">Dutch</option>
-            </select>
-        </div>
-        <img src="{{ url_for('static', filename='images/swap.png') }}" alt="swap" class="lang-select swap" id="swap-button">
-        <div class="lang-select">
-            <p>Langue d'arrivée :</p>
-            <p id="element2">French</p>
-        </div>
-        <input type="submit" value="Begin" class="begin" id="begin">
+        <h1>Imperfect</h1>
+        
     </div>
     
 

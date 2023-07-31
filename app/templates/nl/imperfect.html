@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="nl">
 <head>
-    <title>Résultats</title>
+    <title>OVT</title>
     <meta charset="UTF-8">
     <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/navbars.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/general.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/exercise.css') }}">
     <script type="module" src="{{ url_for('static', filename='js/index.js') }}"></script>
 </head>
 
@@ -17,17 +16,17 @@
 
         <!-- Navigation buttons -->
         <div class="top-buttons">
-            <a href="/fr/home" class="top-button">Acceuil</a>
-            <a href="/fr/translation" class="top-button">Traduction</a>
-            <a href="/fr/imperfect" class="top-button">Imparfait</a>
-            <a href="/fr/participle" class="top-button">Participe passé</a>
+            <a href="/nl/home" class="top-button">Home</a>
+            <a href="/nl/translation" class="top-button">Vertaling</a>
+            <a href="/nl/imperfect" class="top-button-active">OVT</a>
+            <a href="/nl/participle" class="top-button">Voltoid deelwoord</a>
         </div>
 
         <!-- Language switcher -->
         <select id="languageSwitcher">
+            <option value="nl"><span>&#x1F1F3;&#x1F1F1;</span> Nederlands</option>
             <option value="fr"><span>&#x1F1EB;&#x1F1F7;</span> Français</option>
             <option value="en"><span>&#x1F1EC;&#x1F1E7;</span> English</option>
-            <option value="nl"><span>&#x1F1F3;&#x1F1F1;</span> Nederlands</option>
         </select>
 
         <!-- Dark mode switcher -->
@@ -37,20 +36,16 @@
         </label>
     </div>
 
-    <div class="exercise">
-        <h1>Résultats</h1>
-        <p id="score-result"></p>
-        <p>Voici les verbes que tu as révisé lors de cette session d'exercice :</p>
-        <ol id="results-list"></ol>
+    <div class="content">
+        <h1>OVT</h1>
+        
     </div>
-    
 
     <div class="bottom">
         <p class="bottom-component copyright">© 2023 Pierre-Yves Haubruge</p>
-        <a class="bottom-component" href="/fr/terms">Conditions d'utilisation</a>
-        <a class="bottom-component" href="/fr/privacy">Politique de confidentialité</a>
+        <a class="bottom-component" href="/nl/terms">gebruiksvoorwaarden</a>
+        <a class="bottom-component" href="/nl/privacy">privacybeleid</a>
     </div>
-
 </body>
 
 </html>

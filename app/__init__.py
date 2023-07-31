@@ -1,6 +1,5 @@
 import os
 from flask import *
-#from app import db
 from app import verbs
 
 
@@ -12,7 +11,6 @@ def create_app(test_config=None):
 
     app.config.from_mapping(
         SECRET_KEY='dev',
-        #DATABASE=os.path.join(app.instance_path, 'db.sqlite'),
     )
 
     try:
@@ -33,6 +31,14 @@ def create_app(test_config=None):
     @app.route("/<lang>/translation")
     def translation(lang):
         return render_template('/{}/translation.html'.format(lang))
+    
+    @app.route("/<lang>/imperfect")
+    def imperfect(lang):
+        return render_template('/{}/imperfect.html'.format(lang))
+    
+    @app.route("/<lang>/participle")
+    def participle(lang):
+        return render_template('/{}/participle.html'.format(lang))
     
     @app.route("/<lang>/exercise", methods=['GET', 'POST'])
     def exercise(lang):
@@ -57,9 +63,4 @@ def create_app(test_config=None):
     def privacy(lang):
         return render_template('/{}/privacy.html'.format(lang))
    
-    #db.init_app(app)
-
-    #with app.app_context():
-        #db.init_db()
-
     return app
