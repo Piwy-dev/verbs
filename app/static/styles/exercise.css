@@ -1,5 +1,25 @@
+/* This file contains the CSS for the exercises pages. */
+
 p {
     font-size: 18px;
+}
+
+.begin {
+    position: relative;
+    display: block;
+    margin: 50px auto;
+    width: 160px;
+    text-align: center;
+    font-size: 16px;
+    padding: 8px;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: rgb(173, 202, 228);
+}
+
+.begin:hover {
+    background-color: rgb(200, 219, 236);
 }
 
 .exercise {
@@ -10,11 +30,33 @@ p {
     text-align: center;
 }
 
-.verb-sentence {
-    position: relative;
+.imperfect {
     display: inline-block;
-    font-size: 20px;
+    margin: 50px 10px 0 10px;
+    text-align: center;
+    position: relative;
+    left: 45%;
 }
+
+.lang-select {
+    display: inline-block;
+    margin: 50px 10px 0 10px;
+    text-align: center;
+    position: relative;
+    left: 35%;
+}
+
+.swap {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin: 0 50px;
+}
+
+.swap:hover {
+    opacity: 0.4;
+}
+
 
 #answer {
     font-size: 17px;
@@ -48,8 +90,4 @@ p {
 #submit-button:hover {
     background-color: rgb(228, 255, 245);
     color: rgb(145, 144, 144);
-}
-
-#verb {
-    font-weight: bold;
 }

@@ -66,7 +66,28 @@ def get_exercise(startlang: str, endlang: str, tense: int) -> list:
                 verbs.append((verb_list[rd][3], verb_list[rd][5]))
             elif startlang == 'en' or startlang == 'nl':
                 verbs.append((verb_list[rd][0], verb_list[rd][4]))
-    # TODO: add past simple and past participle
+    elif tense == 1: # impefect
+        if startlang == 'en':
+            verb_list = verbs_en
+        elif startlang == 'nl':
+            verb_list = verbs_nl
+        for i in range(20):
+            rd = random.randint(0, len(verb_list)-1)
+            while rd in keeper:
+                rd = random.randint(0, len(verb_list)-1)
+            keeper.append(rd)
+            verbs.append((verb_list[rd][0], verb_list[rd][1]))
+    elif tense == 2: # past participle
+        if startlang == 'en':
+            verb_list = verbs_en
+        elif startlang == 'nl':
+            verb_list = verbs_nl
+        for i in range(20):
+            rd = random.randint(0, len(verb_list)-1)
+            while rd in keeper:
+                rd = random.randint(0, len(verb_list)-1)
+            keeper.append(rd)
+            verbs.append((verb_list[rd][0], verb_list[rd][2]))
     return verbs
             
 

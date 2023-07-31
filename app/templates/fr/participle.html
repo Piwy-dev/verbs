@@ -6,6 +6,7 @@
     <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/navbars.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/general.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/exercise.css') }}">
     <script type="module" src="{{ url_for('static', filename='js/index.js') }}"></script>
 </head>
 
@@ -38,7 +39,14 @@
 
     <div class="content">
         <h1>Participe passé</h1>
-
+        <div class="imperfect">
+            <p>Choisi la langue :</p>
+            <select id="element1">
+                <option value="en">Anglais</option>
+                <option value="nl">Néerlandais</option>
+            </select>
+        </div>
+        <input type="submit" value="Commencer" class="begin" id="begin">
     </div>
     
 

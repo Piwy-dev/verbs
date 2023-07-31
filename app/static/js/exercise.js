@@ -1,3 +1,37 @@
+let translations = {
+    0: {
+        "fr": "Donne la traduction du verbe suivant : ",
+        "en": "Give the translation of the following verb : ",
+        "nl": "Geef de vertaling van het volgende werkwoord : "
+    },
+    1: {
+        "fr": "Donne l'imparfait du verbe suivant : ",
+        "en": "Give the imperfect of the following verb : ",
+        "nl": "Geef de imparfait van het volgende werkwoord : "
+    },
+    2: {
+        "fr": "Donne le participe passé du verbe suivant : ",
+        "en": "Give the past participle of the following verb : ",
+        "nl": "Geef de voltooid deelwoord van het volgende werkwoord : "
+    },
+    "good_answer": {
+        "fr": "Bonne réponse !",
+        "en": "Good answer !",
+        "nl": "Goed antwoord !"
+    },
+    "bad_answer": {
+        "fr": "Mauvaise réponse ! La réponse était : ",
+        "en": "Bad answer ! The answer was : ",
+        "nl": "Fout antwoord ! Het antwoord was : "
+    },
+    "question": {
+        "fr": "Question : ",
+        "en": "Question : ",
+        "nl": "Vraag : "
+    }
+}
+
+
 /** 
  * Compares two strings.
  * @function compareStrings
@@ -37,37 +71,80 @@ function compareStrings(str1, str2) {
  * @description Sends a post request to the server to begin an exercise when the user clicks on the begin button.
  */
 export function beginExercise() {
-    // Verify if the user is on the translation page excluding the domain name
     const lang = document.documentElement.lang;
-    if (window.location.pathname !== `/${lang}/translation`) { return; }
 
-    // Get the begin button
     const beginButton = document.getElementById('begin');
-
-    // Get the informations needed to begin the exercise
     const languageSelector = document.getElementById('element1');
-    const swapKeeper = document.getElementById('swap-keeper');
 
-    // Check if the begin button is clicked
-    beginButton.addEventListener("click", async () => {
-        const response = await fetch(`/${lang}/exercise`, {
-            method: "POST",
-            headers: {
-                startlang: swapKeeper.classList.contains('swaped') ? "fr" : languageSelector.value,
-                endlang: swapKeeper.classList.contains('swaped') ? languageSelector.value : "fr",
-                tense: 0
+    if (window.location.pathname === `/${lang}/translation`) {
+        localStorage.setItem('tense', 0);
+
+        const swapKeeper = document.getElementById('swap-keeper');
+
+        beginButton.addEventListener("click", async () => {
+            const response = await fetch(`/${lang}/exercise`, {
+                method: "POST",
+                headers: {
+                    tense: 0,
+                    startlang: swapKeeper.classList.contains('swaped') ? "fr" : languageSelector.value,
+                    endlang: swapKeeper.classList.contains('swaped') ? languageSelector.value : "fr"
+                }
+            });
+
+            if (response.ok) {
+                const verbs_list = await response.json();
+                localStorage.setItem('verbs_list', JSON.stringify(verbs_list));
+    
+                window.location.href = `/${lang}/exercise`;
+            } else {
+                console.log("Error while starting the exercise.");
             }
         });
-        
-        if (response.ok) {
-            const verbs_list = await response.json();
-            localStorage.setItem('verbs_list', JSON.stringify(verbs_list));
+    } else if (window.location.pathname === `/${lang}/imperfect`) {
+        localStorage.setItem('tense', 1);
 
-            window.location.href = `/${lang}/exercise`;
-        } else {
-            console.log("Error while starting the exercise.");
-        }
-    });
+        beginButton.addEventListener("click", async () => {
+            const response = await fetch(`/${lang}/exercise`, {
+                method: "POST",
+                headers: {
+                    tense: 1,
+                    startlang: languageSelector.value,
+                    endlang: null
+                }
+            });
+
+            if (response.ok) {
+                const verbs_list = await response.json();
+                localStorage.setItem('verbs_list', JSON.stringify(verbs_list));
+    
+                window.location.href = `/${lang}/exercise`;
+            } else {
+                console.log("Error while starting the exercise.");
+            }
+        });
+    } else if (window.location.pathname === `/${lang}/participle`) {
+        localStorage.setItem('tense', 2);
+
+        beginButton.addEventListener("click", async () => {
+            const response = await fetch(`/${lang}/exercise`, {
+                method: "POST",
+                headers: {
+                    tense: 2,
+                    startlang: languageSelector.value,
+                    endlang: null
+                }
+            });
+
+            if (response.ok) {
+                const verbs_list = await response.json();
+                localStorage.setItem('verbs_list', JSON.stringify(verbs_list));
+    
+                window.location.href = `/${lang}/exercise`;
+            } else {
+                console.log("Error while starting the exercise.");
+            }
+        });
+    }
 }
 
 let good_answers = 0;
@@ -79,18 +156,14 @@ let results = [];
  * @description Shows the exercise to the user.
  */
 export function showExercise() {
-    // Verify if the user is on the exercise page excluding the domain name
     const lang = document.documentElement.lang;
+
     if (window.location.pathname !== `/${lang}/exercise`) { return; }
-
-    // Get the verbs list
     const verbs_list = JSON.parse(localStorage.getItem('verbs_list'));
+    const tense = localStorage.getItem('tense');
 
-    // Show the verb
     const verb = document.getElementById('verb');
-    verb.innerHTML = verbs_list[question_number][0];
-
-    console.log(verbs_list[question_number][0]);
+    verb.innerHTML = translations[tense][lang] + `<b>${verbs_list[question_number][0]}</b>`;
 
     const sumbitAnswer = document.getElementById('submit-answer');
     sumbitAnswer.addEventListener("submit", (event) => {
@@ -106,25 +179,7 @@ export function showExercise() {
  */
 function verifyAnswer() {
     const lang = document.documentElement.lang;
-    let translations = {
-        "good_answer": {
-            "fr": "Bonne réponse !",
-            "en": "Good answer !",
-            "nl": "Goed antwoord !"
-        },
-        "bad_answer": {
-            "fr": "Mauvaise réponse ! La réponse était : ",
-            "en": "Bad answer ! The answer was : ",
-            "nl": "Fout antwoord ! Het antwoord was : "
-        },
-        "question": {
-            "fr": "Question : ",
-            "en": "Question : ",
-            "nl": "Vraag : "
-        },
-    }
 
-    // Get the verbs list
     const verbs_list = JSON.parse(localStorage.getItem('verbs_list'));
 
     const answer = document.getElementById('answer').value;
@@ -166,8 +221,9 @@ function verifyAnswer() {
         document.getElementById('answer').focus();
 
         // Show the next verb
+        const tense = localStorage.getItem('tense');
         const verb = document.getElementById('verb');
-        verb.innerHTML = verbs_list[question_number][0];
+        verb.innerHTML = translations[tense][lang] + `<b>${verbs_list[question_number][0]}</b>`;
     }
 }
 
