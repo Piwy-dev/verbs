@@ -31,11 +31,10 @@ p {
 }
 
 .imperfect {
-    display: inline-block;
+    display: block;
     margin: 50px 10px 0 10px;
     text-align: center;
     position: relative;
-    left: 45%;
 }
 
 .lang-select {
