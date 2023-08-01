@@ -248,7 +248,7 @@ verbs_nl = [
     ["overdrijven", "overdreven", "overdreven", "exagérer", "exagérer", "overdrijven"],
     ["overseteken", "staken over", "overgestoken", "traverser", "traverser", "overseteken"],
     ["paardrijden", "reden paard", "paardgereden", "faire de l'équitation", "faire de l'équitation", "paardrijden"],
-    ["plaatsvinden", "vondern plaats", "plaatsgevonden", "avoir lieu", "avoir lieu", "plaatsvinden"],
+    ["plaatsvinden", "vonden plaats", "plaatsgevonden", "avoir lieu", "avoir lieu", "plaatsvinden"],
     ["raden", "raaden", "geraden", "deviner", "deviner", "raden"],
     ["rijden", "reden", "gereden", "rouler", "rouler", "rijden"],
     ["roepen", "riepen", "geroepen", "crier, appeler", "crier, appeler", "roepen"],
