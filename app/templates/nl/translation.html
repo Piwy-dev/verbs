@@ -40,16 +40,18 @@
     <div class="content">
         <h1>Vertaling</h1>
         <div class="lang-select">
-            <p class="" id="swap-keeper">Begin taal :</p>
-            <select name="language" id="element1">
-                <option value="en">Engels</option>
-                <option value="nl">Nederlands</option>
-            </select>
-        </div>
-        <img src="{{ url_for('static', filename='images/swap.png') }}" alt="swap" class="lang-select swap" id="swap-button">
-        <div class="lang-select">
-            <p>Langue d'arrivée :</p>
-            <p id="element2">Frans</p>
+            <div class="lang-select-cmp">
+                <p class="" id="swap-keeper">Begin taal :</p>
+                <select name="language" id="element1">
+                    <option value="en">Engels</option>
+                    <option value="nl">Nederlands</option>
+                </select>
+            </div>
+            <img src="{{ url_for('static', filename='images/swap.png') }}" alt="swap" class="lang-select-cmp swap" id="swap-button">
+            <div class="lang-select-cmp">
+                <p>Langue d'arrivée :</p>
+                <p id="element2">Frans</p>
+            </div>
         </div>
         <input type="submit" value="Beginnen" class="begin" id="begin">
     </div>

@@ -13,6 +13,14 @@ export function setDarkmode() {
     const top = document.querySelector('.top');
     const topButtons = document.querySelectorAll('.top-button');
     const topTitle = document.querySelector('.top-title');
+    const html = document.querySelector('html');
+
+    if (document.querySelector('.begin')) {
+        var begin = document.querySelector('.begin');
+    }
+    if (document.getElementById('element1')) {
+        var element1 = document.getElementById('element1');
+    }
 
     // Set the initial state of the dark mode
     if (isDarkModeEnabled) {
@@ -28,6 +36,13 @@ export function setDarkmode() {
             button.classList.add('dark')
         });
         topTitle.classList.add('dark');
+        html.classList.add('dark');
+        if (document.querySelector('.begin')) {
+            begin.classList.add('dark');
+        }
+        if (document.getElementById('element1')) {
+            element1.classList.add('dark');
+        }
     };
 
     darkModeSwitcher.addEventListener('change', function () {
@@ -43,6 +58,13 @@ export function setDarkmode() {
             button.classList.toggle('dark', isChecked)
         });
         topTitle.classList.toggle('dark', isChecked);
+        html.classList.toggle('dark', isChecked);
+        if (document.querySelector('.begin')) {
+            begin.classList.toggle('dark', isChecked);
+        }
+        if (document.getElementById('element1')) {
+            element1.classList.toggle('dark', isChecked);
+        }
   
         // Store the state of the dark mode in the localStorage object
         localStorage.setItem('darkModeEnabled', isChecked);

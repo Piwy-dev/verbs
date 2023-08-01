@@ -12,7 +12,7 @@ p {
     text-align: center;
     font-size: 16px;
     padding: 8px;
-    border: 1px solid #000000;
+    border: 1px solid #ffffff;
     border-radius: 15px;
     cursor: pointer;
     background-color: rgb(173, 202, 228);
@@ -20,6 +20,16 @@ p {
 
 .begin:hover {
     background-color: rgb(200, 219, 236);
+}
+
+.begin.dark {
+    background-color: rgb(37, 54, 128);
+    color: #fff;
+    border: 1px solid rgb(91, 91, 91);;
+}
+
+.begin.dark:hover {
+    background-color: rgb(60, 76, 147);
 }
 
 .exercise {
@@ -38,11 +48,14 @@ p {
 }
 
 .lang-select {
-    display: inline-block;
-    margin: 50px 10px 0 10px;
+    display: block;
     text-align: center;
     position: relative;
-    left: 35%;
+}
+
+.lang-select-cmp {
+    display: inline-block;
+    margin: 50px 10px 0 10px;
 }
 
 .swap {
@@ -60,6 +73,31 @@ p {
 #answer {
     font-size: 17px;
     margin-right: 15px;
+}
+
+#element1 {
+    background-color: rgb(173, 202, 228);
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    font-size: 16px;
+    cursor: pointer;
+    width: 130px;
+    height: 30px;
+}
+
+#element1:hover {
+    background-color: rgb(200, 219, 236);
+}
+
+#element1.dark {
+    background-color: rgb(37, 54, 128);
+    color: #fff;
+    border: 1px solid rgb(91, 91, 91);;
+}
+
+#element1.dark:hover {
+    background-color: rgb(60, 76, 147);
 }
 
 #results-list {
